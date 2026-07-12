@@ -1,46 +1,38 @@
-# Welcome to femCare
+# FemCare — Personalized Women's Health Companion
 
-## Project info
+An AI-assisted web app that collects user health data through a
+questionnaire and delivers personalized health insights and
+recommendations, built for the Infosys Springboard Hackathon (1st place).
 
-femCare: An AI powered healthcare App, now it's prototype is built using react and typescript!!
+## Features
+- Health questionnaire capturing age, sleep, exercise, menstrual cycle,
+  and lifestyle data
+- Rule-based user segmentation for personalized recommendations
+- Health score calculation and data-driven insights dashboard
+- Responsive React UI
 
-Follow these steps:
+## Tech Stack
+- **Frontend:** React, TypeScript, Tailwind CSS, shadcn/ui (Radix UI
+  components), React Router, TanStack Query
+- **ML Validation:** Hierarchical Clustering and Gaussian Mixture Models
+  (Python/scikit-learn) — a separate pipeline validating the segmentation
+  approach used in the app
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Status
+This is an MVP built under hackathon time constraints:
+- Segmentation in the live app uses rule-based scoring; a real
+  Hierarchical Clustering + GMM pipeline was built and validated
+  separately (not yet wired into the live backend)
+- Login is currently a front-end mock for demo purposes; real
+  authentication is a planned next step
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Getting Started
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
+## Roadmap
+- [ ] Wire the validated clustering pipeline into the live backend
+- [ ] Add real authentication
+- [ ] Persist user data (currently session-only)
