@@ -38,7 +38,6 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#features" className="text-sm font-medium text-fem-dark/80 dark:text-white/80 hover:text-fem-primary transition-colors">
             Features
@@ -64,7 +63,6 @@ const Navbar: React.FC = () => {
           <NavbarThemeToggle />
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-4">
           <NavbarThemeToggle />
           <button
@@ -81,7 +79,6 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={cn(
           'md:hidden absolute inset-x-0 top-full glass dark:glass-dark border-t border-gray-200 dark:border-gray-800 transition-all duration-300 transform ease-in-out',
@@ -92,32 +89,16 @@ const Navbar: React.FC = () => {
       >
         <div className="px-4 py-6 space-y-4">
           <nav className="flex flex-col space-y-4">
-            
-              href="#features"
-              className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
+            <a href="#features" className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Features
             </a>
-            
-              href="#clusters"
-              className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
+            <a href="#clusters" className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Clusters
             </a>
-            
-              href="#profile"
-              className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
+            <a href="#profile" className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Profile
             </a>
-            
-              href="#recommendations"
-              className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
+            <a href="#recommendations" className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               Recommendations
             </a>
           </nav>
