@@ -1,11 +1,12 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
 import NavbarThemeToggle from './NavbarThemeToggle';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -54,10 +55,10 @@ const Navbar: React.FC = () => {
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="sm" onClick={() => navigate('/login')}>
             Sign In
           </Button>
-          <Button size="sm">
+          <Button size="sm" onClick={() => navigate('/login')}>
             Get Started
           </Button>
           <NavbarThemeToggle />
@@ -91,28 +92,28 @@ const Navbar: React.FC = () => {
       >
         <div className="px-4 py-6 space-y-4">
           <nav className="flex flex-col space-y-4">
-            <a
+            
               href="#features"
               className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Features
             </a>
-            <a
+            
               href="#clusters"
               className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Clusters
             </a>
-            <a
+            
               href="#profile"
               className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Profile
             </a>
-            <a
+            
               href="#recommendations"
               className="px-4 py-2 text-sm font-medium text-fem-dark/80 hover:text-fem-primary hover:bg-fem-light rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -122,10 +123,10 @@ const Navbar: React.FC = () => {
           </nav>
 
           <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
-            <Button variant="outline" fullWidth>
+            <Button variant="outline" fullWidth onClick={() => navigate('/login')}>
               Sign In
             </Button>
-            <Button fullWidth>
+            <Button fullWidth onClick={() => navigate('/login')}>
               Get Started
             </Button>
           </div>
